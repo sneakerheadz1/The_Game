@@ -1,0 +1,37 @@
+html*{
+    padding: 10px;
+    margin: 10px;
+}
+nav{
+    width: 100vw;
+    border: 1px solid black;
+   display: flex;
+}
+
+
+#score{
+    width: 100vw;
+    border: 1px solid black;
+}
+
+#game-body{
+    width: 100vw;
+    border: 1px solid black;
+}
+
+.top{
+    width: 100vw;
+    border: 1px solid black;
+}
+.right{
+    width: 100vw;
+    border: 1px solid black;
+}
+.bottom{
+    width: 100vw;
+    border: 1px solid black;
+}
+.left{
+    width: 100vw;
+    border: 1px solid black;
+}
