@@ -4,37 +4,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
 
 /* html & body */
-html*{
-    padding: 10px;
-    margin: 10px;
+html{
+   
+    background: url(rim.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding: 0px;
+    margin: 0px;
     line-height: 1.5;
     box-sizing: border-box;
     overflow: hidden;
 }
 
+#overlay{
+    background: 
+    /* top, transparent red, faked with gradient */ 
+    linear-gradient(
+      rgba(26, 26, 29, 0.45), 
+      rgba(26, 26, 29, 0.45));
+      height: 100vh;
+}
+
+body {
+    background:rgba(26, 26, 29, 0.45);
+}
+
 .body-header {
-font-family: Zen Tokyo Zoo, sans-serif;
+font-family: Black ops One, sans-serif;
 
 }
 
 /* navigation styling */
 nav{
     width: 100vw;
-    border: 1px solid black;
+    /* border: 1px solid #dfdfdf; */
    display: flex;
 }
 .navbar {
-    background: none;
+    background: rgba(26, 26, 29, 0.80);
     padding: 1rem 2rem .3rem;
-   -webkit-box-shadow: 0 5px 6px -6px black;
-	-moz-box-shadow: 0 5px 6px -6px black;
-	box-shadow: 0 5px 6px -6px black;
+	box-shadow: 0 5px 6px -6px rgb(188, 188, 188);
     height: 3%;
 }
 a{
     text-decoration: none;
-    color: blue;
+    color:  #950740;
     font-weight: 500;
+}
+
+.nav-link {
+    color:  #950740;
 }
 a:hover{
     color: orange;
@@ -65,11 +83,11 @@ a:hover{
     position: relative;
 }
 .navbar-expand-lg .navbar-nav .nav-link:hover {
-    border-top: 4px solid blue;
+    border-top: 4px solid #950740;
 }
 .navbar-expand-lg .navbar-nav .nav-link:active {
-    border-top: 4px solid blue;
-    color: blue;
+    border-top: 4px solid #950740;
+    color:  #950740;
 }
 
 /* body header */
@@ -77,14 +95,18 @@ a:hover{
     text-align: center;
     margin-top: 5%;
 }
+.title-header {
+    color: #950740;
+}
 
 
 /* header buttons */
 .header-btn {
 display:inline-block;
+color: #4E4E50;
 padding: 0.9em 5em;
 margin: 10% 0.8em 0.1em 0;
-border: .08em solid blue;
+border: .10em solid #6F2232;
 border-radius: 2em;
 background: white;
 text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.255);
@@ -94,7 +116,7 @@ letter-spacing: 1.2px;
 font-weight: bold;
 }
 .header-btn:hover{
-    background: navy;
+    background: #6F2232;
     color: white;
     }
 
@@ -103,14 +125,16 @@ font-weight: bold;
 
 
 /* title styling */
-#score{
-    width: 100vw;
-    border: 1px solid black;
-}
+
 
 #game-body{
-    width: 100vw;
-    border: 1px solid black;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+    width: 80%;
+    border: 3px solid green;
+   padding: 10px;
 }
 
 
@@ -140,13 +164,14 @@ font-weight: bold;
     bottom:0;
     width:100%;
     height:15%;   /* Height of the footer */
-    background:#6cf;
+    background:#1A1A1D;
     position: fixed;
 }
 
 .web-footer h3 {
     font-size: 1.3em;
     padding-top: 15px;
+    color: #950740;
 }
 
 .list-unstyled {
@@ -161,9 +186,8 @@ font-weight: bold;
     width: 30px;
     height: 30px;
     margin: 0 5px 5px 0;
-
 }
 
 .footer-social span {
-    color: black;
+    color: #6F2232;
 }
