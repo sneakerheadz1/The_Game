@@ -5,12 +5,14 @@ let computerSeq = [];
 let playerOneSeq = []
 let playerTwoSeq = [];
 
+
+//  research more efficient  ways to write this code
 // keyboard functions  --- https://www.section.io/engineering-education/keyboard-events-in-javascript/
 document.addEventListener('keydown', (e) => {
     // console.log(e.code);     // -- https://developers.google.com/web/updates/2016/04/keyboardevent-keys-codes
-    const key =  document.querySelector(`data-key="${e.code}"`);
+    const key =  document.querySelector(`data-key="${e.keyCode}"`);
     console.log(key)
-    const sound = document.querySelector(`audio[data-key="${e.code}"]`);
+    const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
     // console.log(sound);
     // if(sound == null) return; // if no sound is associated with key stop function
     // sound.play();
@@ -19,10 +21,6 @@ document.addEventListener('keydown', (e) => {
   });
 
 
-
-
-
-// play input module >> create instruction model
 
 
 
