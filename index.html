@@ -17,7 +17,7 @@
     <header class="header">
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">LOGO</a>
+              <a class="navbar-brand" href="#">Simon'sCourt</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span ></span>
                 <span ></span>
@@ -27,10 +27,10 @@
                 <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Item 1</a>
+                    <a class="nav-link" href="#"><span class="fab fa-github-square fa-2x"></span></a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Item 2</a>
+                    <a class="nav-link" href="#"><span class="fab fa-linkedin fa-2x "></span></a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#">Item 3</a>
@@ -41,9 +41,39 @@
           </nav>
     </header>
 
+    <!-- player-greeting >> modal -->
+    <div class="player-level">
+    <h2>Welcome + name, Level </h2>
+    </div>
     <!-- body-header -->
     <div id="game-body">
-        
+        <!-- Arrow Keys -->  
+     <div class="button-keys"> <!-- data attribute -  custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM      -->
+            <div data-key="37" class="key">
+                <kbd>Bulls</kbd>     <!-- The <kbd> HTML element represents a span of inline text denoting textual user input from a keyboard    -->
+                <span class="sound">kick</span>
+            </div>  
+            <div data-key="38" class="key">
+                <kbd>Lakers</kbd>
+                <span class="sound">kick</span>
+            </div>
+            <div data-key="39" class="key">
+                <kbd>Wizards</kbd>
+                <span class="sound">kick</span>
+            </div>
+            <div data-key="40" class="key">
+                <kbd>Warriors</kbd>
+                <span class="sound">kick</span>
+            </div>
+           
+    </div>
+    <audio data-key="37" src="sounds/kick.wav"></audio>  
+    <audio data-key="38" src="sounds/kick.wav"></audio>
+    <audio data-key="39" src="sounds/kick.wav"></audio>
+    <audio data-key="40" src="sounds/kick.wav"></audio>
+    
+    
+
     </div>
 
   </div>
@@ -65,14 +95,15 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <script src="game.js"></script>
+    
 
     <!-- Footer -->
     <footer class="web-footer justify-content-center">
         <div class="">
-            <h3>Social Media</h3>
+            <h3>SHARE YOUR SCORE</h3>
             <ul class="list-unstyled d-flex footer-social">
-                <li><a href="#"><span class="fab fa-github-square fa-2x"></span></a></li>
-                <li><a href="#"><span class="fab fa-linkedin fa-2x "></span></a></li>
+                <li><a href="#"><span class="fab fa-instagram-square fa-2x"></span></a></li>
+                <li><a href="#"><span class="fab fa-twitter-square fa-2x "></span></a></li>
             </ul>
 
         </div>
