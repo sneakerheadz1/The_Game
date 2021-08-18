@@ -32,11 +32,11 @@ font-family: Anonymous Pro, Arial, Helvetica, sans-serif;
   width: 100vw;
   margin: 0;
   padding: 0;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 1.5fr 1.2fr 0.8fr;
+  grid-template-columns: 0.5fr 1fr ;
+  grid-template-rows:   auto ;
   grid-template-areas: 
   "nav nav nav nav"
-  "content1 content1 content1 content1"
+  "sidebar content1 content1 content1"
   "main main main main"
   "footer footer footer footer";
   gap: 0.5rem;
@@ -47,7 +47,6 @@ nav{
   background: rgba(26, 26, 29, 0.80);
   padding: 1rem 2rem .3rem;
 	box-shadow: 0 5px 6px -6px rgb(188, 188, 188);
-  /* width: 100vw; */
   grid-area: nav;
 }
 
@@ -96,59 +95,106 @@ a:hover{
 }
 
 
-/* main styling */
+/* main styling > game keys */
 main{
-  align-self: end;
-  text-align: center;
+  background: rgb(0, 0, 0,0.7);
   grid-area: main;
+  height: 75vh;
 }
 
-/* header buttons  --- landing.html*/
-.header-btn {
-  display:inline-block;
-  justify-content: center;
-  color: #4E4E50;
-  padding: 0.9em 5em;
-  margin: 10% 0.8em 0.1em 0;
-  border-radius: 2em;
-  text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.255);
-  font-family: Anonymous Pro, sans-serif;
-  font-size: 1.1em;
-  letter-spacing: 1.2px;
-  font-weight: bold;
-  }
-  .header-btn:hover{
-      background: #6F2232;
-      color: white;
-      }
+
+#bulls{
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #e76f51;
+  top: 60%;
+  left: 45%;
+  margin: -100px -0px 0px -150px;
+  border-style: solid;
+  border: 3px solid #333;
+  box-sizing: border-box;
+}
+
+
+
+#lakers {
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #e76f51;
+  top: 53%;
+  left: 55%;
+  margin: 100px 0px 0px 0px;
+  border: 3px solid #333;
+  border-width: 5px;
+
+}
+
+#wizards {
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #e76f51;
+  top: 68%;
+  left: 49%;
+  margin: 0px -200px 0px -200px;
+  border-style: solid;
+  border-width: 5px;
+  box-sizing: border-box;
+
+}
+
+#warriors {
+  position: absolute;
+  width:100px;
+  height:100px;
+  border-radius:50%;
+  background-color: #e76f51;
+  top: 45%;
+  left: 55%;
+  margin: 0px 0px -100px 0px;
+  border-style: solid;
+  border-width: 5px;
+}
+
+#player-rounds {
+  position: absolute;
+  background:transparent;
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  border: solid  1px white;
+  border-width: 10px;
+  top: 50%;
+  left: 55%;
+  margin: 0px 0px 0px -180px;
+  
+}
+
+
 
 
 /* sidebar styling */
 #sidebar{
-    background: #18ffff;
+    background: white;
     grid-area: sidebar;
 }
 
-
-
 /* content styling */
 #content1{
-
- grid-area: content1;
-}
-.body-header {
   color: #950740;
   font-family: Black ops One, sans-serif;
-  text-align: center;
+  text-align: start;
   margin-top: 2rem;
-  }
-/*   
-#content2{
-  background: #64ffda;
+ grid-area: content1;
 }
-#content3{
-  background: #73ffba;
-} */
+
+
+
 
 /* footer styling */
 footer{
