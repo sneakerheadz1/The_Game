@@ -1,31 +1,36 @@
-//  variables
-
 let score = 0;
 let computerSeq = [];
 let playerOneSeq = []
-let playerTwoSeq = [];
+// let playerTwoSeq = [];
+let compTurn;
+let intervalId;  // time interval set null
+let strict = false;
+let turn;
 
 
-//  research more efficient  ways to write this code
-// keyboard functions  --- https://www.section.io/engineering-education/keyboard-events-in-javascript/
-document.addEventListener('keydown', (e) => {
-    // console.log(e.code);     // -- https://developers.google.com/web/updates/2016/04/keyboardevent-keys-codes
-    const key =  document.querySelector(`data-key="${e.keyCode}"`);
-    console.log(key)
-    const sound = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-    // console.log(sound);
-    // if(sound == null) return; // if no sound is associated with key stop function
-    // sound.play();
-    key.classList.add('playing')
 
+
+const turnCounter = document.querySelector("#turn");
+const topLeft = document.querySelector("#bulls");
+const topRight = document.querySelector("#lakers");
+const bottomLeft = document.querySelector("#wizards");
+const bottomRight = document.querySelector("#warriors");
+const strictButton = document.querySelector("#strict"); //add strict option
+const onButton = document.querySelector("#on"); // add or delete
+const startButton = document.querySelector("#start");
+
+
+
+  startButton.addEventListener('click', (event) => {
+      play();
+ 
   });
-
-  let  RandInt = (min, max) => {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-
-
-
+  
+  function play() {
+    order = [];
+    turn = 1;
+    for (var i = 0; i < 4; i++) {
+      order.push(Math.floor(Math.random() * 4) + 1);
+      console.log(order)
+    }
+  }

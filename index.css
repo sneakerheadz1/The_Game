@@ -125,12 +125,13 @@ main{
   height:100px;
   border-radius:50%;
   background-color: #e76f51;
+  border: 3px solid #333;
   top: 60%;
   left: 55%;
   margin: 100px 0px 0px 0px;
   border: 3px solid #333;
   border-width: 5px;
-
+  transition: all 0.07s;
 }
 
 #wizards {
@@ -139,13 +140,14 @@ main{
   height:100px;
   border-radius:50%;
   background-color: #e76f51;
+  border: 3px solid #333;
   top: 75%;
   left: 49%;
   margin: 0px -200px 0px -200px;
   border-style: solid;
   border-width: 5px;
+  transition: all 0.07s;
 }
-
 
 #warriors {
   position: absolute;
@@ -153,11 +155,18 @@ main{
   height:100px;
   border-radius:50%;
   background-color: #e76f51;
+  border: 3px solid #333;
   top: 49%;
   left: 55%;
   margin: 0px 0px -100px 0px;
   border-style: solid;
   border-width: 5px;
+  transition: all 0.07s;
+}
+.playing {
+  transform: scale(1.1);
+  color: #ffc600;
+  box-shadow: 0 0 10px #ffc600;
 }
 
 #player-rounds {
@@ -171,7 +180,7 @@ main{
   top: 58%;
   left: 56%;
   margin: 0px 0px 0px -185px;
-
+  transition: all 0.07s;
 }
 .wrapper{
   display: flex;
