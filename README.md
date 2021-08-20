@@ -3,6 +3,7 @@
 ### Per Scholas Mod 1 project
 
 Languages: HTML, CSS, Javascript ES6
+
 [GitHub] ( https://sneakerheadz1.github.io/The_Game/)
 
 #### Game play
