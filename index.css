@@ -109,6 +109,8 @@ main{
 
 #bulls{
   position: absolute;
+  color: white;
+  text-align: center;
   width:100px;
   height:100px;
   border-radius:8%;
@@ -125,6 +127,8 @@ main{
 
 #lakers {
   position: absolute;
+  color: white;
+  text-align: center;
   width:100px;
   height:100px;
   border-radius:8%;
@@ -140,6 +144,8 @@ main{
 
 #wizards {
   position: absolute;
+  color: white;
+  text-align: center;
   width:100px;
   height:100px;
   border-radius:8%;
@@ -155,6 +161,8 @@ main{
 
 #warriors {
   position: absolute;
+  color: white;
+  text-align: center;
   width:100px;
   height:100px;
   border-radius:8%;
@@ -175,7 +183,9 @@ main{
   border-radius:8%;
   height: 150px;
   width: 150px;
+  color: white;
   border: solid  1px white;
+  text-align: center;
   border-width: 10px;
   top: 58%;
   left: 56%;

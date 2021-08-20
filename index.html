@@ -47,18 +47,20 @@
     <main>
         <div class="wrapper">
         <div  id="bulls" class="card-one"> <!-- data attribute -  custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM      -->
-          <span class="sound"></span>
+           Card 1: 
         </div>
-        <div id="lakers" class="card-two">
-          <span class="sound"></span>
+        <div2 id="lakers" class="card-two">
+          <span class="twocard"> Card 2</span>
+        </div2>
+        <div2  id="wizards" class="card2three">
+          <span class="threecard"> Card 3</span>
+        </div2>
+        <div id="warriors" class="card2four">
+          <span class="fourcard"> Card 4</span>
         </div>
-        <div  id="wizards" class="card-three">
-          <span class="sound"></span>
+        <div id="player-rounds" class="game-sum">
+          <span>Card Total: </span>
         </div>
-        <div id="warriors" class="card-four">
-          <span class="sound"></span>
-        </div>
-        <div id="player-rounds"></div>
           <div class="text1">
             <span></span><span></span>
           </div>
@@ -71,15 +73,15 @@
 
 
     <div id="sidebar">
-      <span>Start Game</span>
+      <span id="game-message">Are you ready to play?</span>
       <div id="switches">
         <button class="button" id="start">Start</button> 
         <button id="draw-card" onclick="newCard()">Draw</button>
       </div>
     </div>
 
-    <div id="content1" class="player-level">
-      <h2>Welcome + name, Level </h2>
+    <div id="content1">
+      <h2 class="player-level">Welcome + name, Level </h2>
     </div>
 
   </div>
