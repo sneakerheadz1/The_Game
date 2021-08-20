@@ -44,28 +44,29 @@ function randomCards () {
 // game function  
 function Game() {
 
-    // display card numbers to page
-    gameSum.textContent = "Card Total:  " + sum;
-    cardOne.textContent = (` Card : \n  ${firstCard} `)
-    cardTwo.textContent = (` Card : \n  ${secondCard} `)
-    cardThree.textContent = (` Card : \n  ${drawCardOne} `)
-    cardThree.textContent = (` Card : \n  ${drawCardTwo} `)
-  
-  
-    if (sum <= 20) {
-      playerMessage = (`Want to draw another card or stay?`)
-      // if(!draw){ `Wait for dealer to play ${sum}`}
-    } else if( sum === 21) {
-      BlackJack = true;
-      round += 1
-      playerMessage = (`You Won!!! ${round}`)
-      Game()
-    } else {
-      playerMessage = (`You Lose!!!`)
-      gameOn = false;
-    }
-    gameMessage.textContent = playerMessage;
+  gameSum.textContent = "Sum:  " +  sum;
+  cardOne.textContent = (`New Card : 
+  ${firstCard} `)
+  cardTwo.textContent = (`New Card :
+   ${secondCard} `)
+//   cardThree.textContent = (`Draw Card : 
+//   ${drawCardOne} `)
+
+
+  if (sum <= 20) {
+    playerMessage = (`Want to draw another card or stay?`)
+    // if(!draw){ `Wait for dealer to play ${sum}`}
+  } else if( sum === 21) {
+    BlackJack = true;
+    round += 1
+    playerMessage = (`You Won!!! ${round}`)
+    Game()
+  } else {
+    playerMessage = (`You Lose!!!`)
+    isAlive = false;
   }
+  gameMessage.textContent = playMessage;
+}
 
 
   // start game function
