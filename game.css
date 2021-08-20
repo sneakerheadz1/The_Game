@@ -9,7 +9,7 @@
     padding: 0;
 }
 body {
-background: url(rim.jpg) no-repeat center center fixed;
+background: url(images/ace1.jpg) no-repeat center center fixed;
  background-size: cover;
 line-height: 1.5;
 height: 100vh;
@@ -20,7 +20,7 @@ font-family: Anonymous Pro, Arial, Helvetica, sans-serif;
   background: 
   /*  transparent gradient */ 
   linear-gradient(
-    rgba(26, 26, 29, 0.45), 
+    rgba(0, 0, 0, 0.7), 
     rgba(26, 26, 29, 0.45));
     height: 100%;
     width: 100vw;
@@ -44,12 +44,16 @@ font-family: Anonymous Pro, Arial, Helvetica, sans-serif;
 
 /* nav styling */
 nav{
-  background: rgba(26, 26, 29, 0.80);
+  background: rgba(0, 0, 0, 0.80);
   padding: 1rem 2rem .3rem;
 	box-shadow: 0 5px 6px -6px rgb(188, 188, 188);
   /* width: 100vw; */
   grid-area: nav;
 }
+.navbar-brand {
+  color: #950740;
+}
+
 
 a {
   text-decoration: none;
@@ -83,6 +87,7 @@ a:hover{
   margin-left: 10px;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
+  color: #950740;
   padding: .8rem 1rem;
   font-size: 1rem;
   position: relative;
@@ -98,7 +103,7 @@ a:hover{
 
 /* main styling */
 main{
-  align-self: end;
+  align-self: flex-start;
   text-align: center;
   grid-area: main;
 }
@@ -109,7 +114,7 @@ main{
   justify-content: center;
   color: #4E4E50;
   padding: 0.9em 5em;
-  margin: 10% 0.8em 0.1em 0;
+  margin: 0% 0.8em 0.1em 0;
   border-radius: 2em;
   text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.255);
   font-family: Anonymous Pro, sans-serif;
@@ -124,10 +129,6 @@ main{
 
 
 /* sidebar styling */
-#sidebar{
-    background: #18ffff;
-    grid-area: sidebar;
-}
 
 
 
@@ -137,18 +138,11 @@ main{
  grid-area: content1;
 }
 .body-header {
-  color: #950740;
+  color: black;
   font-family: Black ops One, sans-serif;
   text-align: center;
   margin-top: 2rem;
   }
-/*   
-#content2{
-  background: #64ffda;
-}
-#content3{
-  background: #73ffba;
-} */
 
 /* footer styling */
 footer{

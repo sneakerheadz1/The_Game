@@ -1,13 +1,13 @@
 let score = 0;
-let computerSeq = [];
-let playerOneSeq = []
-// let playerTwoSeq = [];
+let game = true;
+const computerSeq = [];
+const playerOneSeq = [];
+const keyCodes = ["keyD", "keyF", "keyG", "keyH"]
 let compTurn;
-let intervalId;  // time interval set null
+let playerTurn;
+let intervalId;
 let strict = false;
 let turn;
-
-
 
 
 const turnCounter = document.querySelector("#turn");
@@ -27,10 +27,16 @@ const startButton = document.querySelector("#start");
   });
   
   function play() {
-    order = [];
-    turn = 1;
-    for (var i = 0; i < 4; i++) {
-      order.push(Math.floor(Math.random() * 4) + 1);
-      console.log(order)
-    }
-  }
+      while(game) {
+        computerSeq.push(keyCodes[Math.floor(Math.random() * 4) + 1]);
+        userMove()
+        game = false;
+      }
+  };
+
+  function userMove (){
+    document.addEventListener('keydown', function(event) {
+    playerOneSeq.push(event.code)
+    });
+  };
+  

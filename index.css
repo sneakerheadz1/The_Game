@@ -9,7 +9,7 @@
     padding: 0;
 }
 body {
-background: url(rim.jpg) no-repeat center center fixed;
+background: url(/images/ace2.jpg) no-repeat center center fixed;
  background-size: cover;
 line-height: 1.5;
 height: 100vh;
@@ -35,9 +35,9 @@ font-family: Anonymous Pro, Arial, Helvetica, sans-serif;
   grid-template-columns: 1fr 1fr 1fr 1fr ;
   grid-template-rows:   1fr 1fr 1fr ;
   grid-template-areas: 
-  "nav nav nav nav"
-  "sidebar content1 content1 content1"
-  "main main main main"
+  /* "nav nav nav nav" */
+  "content1 content1 content1 content1"
+  "sidebar main main main"
   "footer footer footer footer";
   gap: 0.5rem;
 }
@@ -48,6 +48,9 @@ nav{
   padding: 1rem 2rem .3rem;
 	box-shadow: 0 5px 6px -6px rgb(188, 188, 188);
   grid-area: nav;
+}
+.navbar-brand {
+  color: #950740;
 }
 
 a {
@@ -82,6 +85,7 @@ a:hover{
   margin-left: 10px;
 }
 .navbar-expand-lg .navbar-nav .nav-link {
+  color:#950740;
   padding: .8rem 1rem;
   font-size: 1rem;
   position: relative;
@@ -107,13 +111,13 @@ main{
   position: absolute;
   width:100px;
   height:100px;
-  border-radius:50%;
-  background-color: #e76f51;
+  border-radius:8%;
+  background-color: #333;
   top: 65%;
   left: 45%;
   margin: -100px -0px 0px -150px;
   border-style: solid;
-  border: 3px solid #333;
+  border: 5px solid #950740;
   box-sizing: border-box;
 }
 
@@ -123,13 +127,13 @@ main{
   position: absolute;
   width:100px;
   height:100px;
-  border-radius:50%;
-  background-color: #e76f51;
-  border: 3px solid #333;
+  border-radius:8%;
+  background-color: #333;
+  border: 5px solid #950740;
   top: 60%;
   left: 55%;
   margin: 100px 0px 0px 0px;
-  border: 3px solid #333;
+  border: 5px solid #950740;
   border-width: 5px;
   transition: all 0.07s;
 }
@@ -138,9 +142,9 @@ main{
   position: absolute;
   width:100px;
   height:100px;
-  border-radius:50%;
-  background-color: #e76f51;
-  border: 3px solid #333;
+  border-radius:8%;
+  background-color: #333;
+  border: 5px solid #950740;
   top: 75%;
   left: 49%;
   margin: 0px -200px 0px -200px;
@@ -153,9 +157,9 @@ main{
   position: absolute;
   width:100px;
   height:100px;
-  border-radius:50%;
-  background-color: #e76f51;
-  border: 3px solid #333;
+  border-radius:8%;
+  background-color: #333;
+  border: 5px solid #950740;
   top: 49%;
   left: 55%;
   margin: 0px 0px -100px 0px;
@@ -163,16 +167,12 @@ main{
   border-width: 5px;
   transition: all 0.07s;
 }
-.playing {
-  transform: scale(1.1);
-  color: #ffc600;
-  box-shadow: 0 0 10px #ffc600;
-}
+
 
 #player-rounds {
   position: absolute;
   background:transparent;
-  border-radius: 50%;
+  border-radius:8%;
   height: 150px;
   width: 150px;
   border: solid  1px white;
@@ -188,12 +188,25 @@ main{
 }
 
 
+#switches {
+  position: initial;
+  text-align: center;
+  font-family: 'Original Surfer';
+}
 
+#switches button {
+  border-radius: 20%;
+  font-size: 1em;
+  background-color: lightgray;
+}
 
 
 /* sidebar styling */
 #sidebar{
-    background: white;
+  display: inline-grid;
+    background:rgb(0, 0, 0,0.7);
+    text-align: center;
+    color: white;
     grid-area: sidebar;
 }
 
@@ -201,7 +214,7 @@ main{
 #content1{
   color: #950740;
   font-family: Black ops One, sans-serif;
-  text-align: start;
+  text-align: center;
   margin-top: 2rem;
  grid-area: content1;
 }
