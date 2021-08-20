@@ -1,16 +1,20 @@
+// variable
 let firstCard = randomCards();
 let secondCard = randomCards();
 // let drawCardOne = "";
 // let drawCardTwo = "" ;
 let sum = firstCard + secondCard;
-let hasBlackJack = false;
+let BlackJack = false;
 let gameOn = false;
 let round = 0;
 let playMessage;
 
+
+// DOM elements
 const gameMessage = document.querySelector(".game-message");
 // console.log(gameMessage)
 const gameSum = document.querySelector("#game-sum");
+// console.log(gameSum)
 const cardOne = document.querySelector(".card-one");
 const cardTwo = document.querySelector(".card-two");
 const cardThree = document.querySelector(".card-three");
@@ -18,30 +22,7 @@ const cardFour = document.querySelector(".card-four");
 
 
 
-// shuffle cards 
-function randomCards () {
-    let randomCard = Math.floor(Math.random() * 12) + 1
-    if (randomCard > 10) {
-      return 10
-    } else if (randomCard === 1) {
-      return 11
-    } else {
-      return randomCard;
-    }
-  }
 
-  // allow player to draw card
-  function newCard() {
-    if (gameOn === true && BlackJack === false) {
-      let drawCard = randomCards();
-      sum += drawCard
-     Game()
-    }
-  }
-
-
-
-// game function  
 function Game() {
 
   gameSum.textContent = "Sum:  " +  sum;
@@ -54,23 +35,53 @@ function Game() {
 
 
   if (sum <= 20) {
-    playerMessage = (`Want to draw another card or stay?`)
+    playMessage = (`Want to draw another card or stay?`)
     // if(!draw){ `Wait for dealer to play ${sum}`}
   } else if( sum === 21) {
     BlackJack = true;
     round += 1
-    playerMessage = (`You Won!!! ${round}`)
+    playMessage = (`You Won!!! ${round}`)
     Game()
   } else {
-    playerMessage = (`You Lose!!!`)
+    playMessage = (`You Lose!!!`)
     isAlive = false;
   }
   gameMessage.textContent = playMessage;
 }
 
+function randomCards ()  {
 
-  // start game function
-  function startGame() {
-    gameOn = true;
-    Game()
+  let randomCard = Math.floor(Math.random() * 12) + 1
+  if (randomCard > 10) {
+    return 10
+  } else if (randomCard === 1) { // allow player to make choice
+    return 11
+  } else {
+    return randomCard;
+    //console.log(randomCard)
   }
+}
+
+function newCard () {
+  if (gameOn === true && BlackJack === false) {
+    drawCardOne = randomCards();
+    cardThree.textContent = (`Draw Card : 
+  ${drawCardOne} `)
+  
+  }
+  // else{
+  //   if (gameOn === true && BlackJack === false) {
+  //     drawCardTwo = randomCards();
+  //     cardFour.textContent = (`Draw Card : 
+  //   ${drawCardTwo} `)
+    
+  //   }
+  // }
+  gameSum.textContent = (`Sum : ${sum += drawCardOne}`)
+    Game()
+}
+
+function startGame() {
+  gameOn = true;
+  Game()
+}
