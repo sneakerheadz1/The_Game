@@ -44,7 +44,7 @@ function Game() {
     Game()
   } else {
     playMessage = (`You Lose!!!`)
-    isAlive = false;
+    gameOn = false;
   }
   gameMessage.textContent = playMessage;
 }
