@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GamePage</title>
   <link rel="stylesheet" href="index.css">
-
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/abd94eb4a5.js" crossorigin="anonymous"></script>
@@ -32,8 +31,6 @@
           <li class="nav-item">
             <a class="nav-link" href="#"><span class="fab fa-linkedin fa-2x "></span></a>
           </li>
-          <li class="nav-item">
-          </li>
         </ul>
       </div>
     </div>
@@ -45,46 +42,42 @@
   <div class="container">
 
     <main>
-        <div class="wrapper">
-        <div  id="bulls" class="card-one"> <!-- data attribute -  custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM      -->
-           Card 1: 
+
+        <div id="bulls" class="card-one"> <!-- data attribute -  custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM      -->
+         Card 1:
         </div>
-        <div2 id="lakers" class="card-two">
-          <span class="twocard"> Card 2</span>
-        </div2>
-        <div2  id="wizards" class="card2three">
-          <span class="threecard"> Card 3</span>
-        </div2>
-        <div id="warriors" class="card2four">
-          <span class="fourcard"> Card 4</span>
+        <div  id="lakers" class="card-three">
+            Card 3:
         </div>
-        <div id="player-rounds" class="game-sum">
-          <span>Card Total: </span>
+        <div id="wizards" class="card-four">
+            Card 4:
         </div>
-          <div class="text1">
-            <span></span><span></span>
-          </div>
-          <div id="turn"></div>
-           <div class="text2">
-          </div>
-      </div>
+        <div id="warriors" class="card-two">
+          Card 2:
+        </div>
+        
+      
+        <div class="player-rounds">
+          <div id="game-sum" style="color: white; text-align: center;">
+      
+            Sum: 
+          </div>  <!-- rounds  -->
+        </div>
     </main>
 
+    <div id="content1" class="player-level">  <!-- user name  -->
+      <h2 class="game-message" style="color: black;">Welcome + name, Level </h2>
+    </div>
 
 
-    <div id="sidebar">
-      <span id="game-message">Are you ready to play?</span>
+    <div id="sidebar" >
+        Are you Ready to play?
       <div id="switches">
-        <button class="button" id="start">Start</button> 
+        <button class="button" id="start" onclick="startGame()">Start</button>
         <button id="draw-card" onclick="newCard()">Draw</button>
-      </div>
     </div>
-
-    <div id="content1">
-      <h2 class="player-level">Welcome + name, Level </h2>
-    </div>
-
   </div>
+  
 </div>
   
 

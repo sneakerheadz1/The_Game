@@ -1,26 +1,26 @@
-// variable
 let firstCard = randomCards();
 let secondCard = randomCards();
-let drawCardOne = randomCards();
-let drawCardTwo = randomCards();
-let sum = firstCard + secondCard + drawCardOne + drawCardOne;
-let BlackJack = false;
+// let drawCardOne = "";
+// let drawCardTwo = "" ;
+let sum = firstCard + secondCard;
+let hasBlackJack = false;
 let gameOn = false;
-let playerMessage;
+let playMessage;
 
-
-// DOM elements
-const gameMessage = document.querySelector("#game-message");
+const gameMessage = document.querySelector(".game-message");
 // console.log(gameMessage)
-const gameSum = document.querySelector(".game-sum");
-// console.log(gameSum)
+const gameSum = document.querySelector("#game-sum");
 const cardOne = document.querySelector(".card-one");
-// console.log(cardOne)
 const cardTwo = document.querySelector(".card-two");
 const cardThree = document.querySelector(".card-three");
 const cardFour = document.querySelector(".card-four");
 
 
+
+function startGame() {
+  gameOn = true;
+  Game()
+}
 
 // shuffle cards 
 function randomCards () {
