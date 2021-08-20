@@ -5,6 +5,7 @@ let secondCard = randomCards();
 let sum = firstCard + secondCard;
 let hasBlackJack = false;
 let gameOn = false;
+let round = 0;
 let playMessage;
 
 const gameMessage = document.querySelector(".game-message");
@@ -16,11 +17,6 @@ const cardThree = document.querySelector(".card-three");
 const cardFour = document.querySelector(".card-four");
 
 
-
-function startGame() {
-  gameOn = true;
-  Game()
-}
 
 // shuffle cards 
 function randomCards () {
@@ -34,6 +30,7 @@ function randomCards () {
     }
   }
 
+  // allow player to draw card
   function newCard() {
     if (gameOn === true && BlackJack === false) {
       let drawCard = randomCards();
@@ -56,15 +53,23 @@ function Game() {
   
   
     if (sum <= 20) {
-      playerMessage = "Want to draw another card"
+      playerMessage = (`Want to draw another card or stay?`)
+      // if(!draw){ `Wait for dealer to play ${sum}`}
     } else if( sum === 21) {
       BlackJack = true;
-      playerMessage = "You Won!!!"
+      round += 1
+      playerMessage = (`You Won!!! ${round}`)
+      Game()
     } else {
-      playerMessage = "You Lose!!!"
+      playerMessage = (`You Lose!!!`)
       gameOn = false;
     }
     gameMessage.textContent = playerMessage;
   }
 
 
+  // start game function
+  function startGame() {
+    gameOn = true;
+    Game()
+  }
