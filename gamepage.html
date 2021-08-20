@@ -4,18 +4,19 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home-Landing</title>
-  <link rel="stylesheet" href="game.css">
+  <title>GamePage</title>
+  <link rel="stylesheet" href="index.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/abd94eb4a5.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
   
    <!-- nav-header -->
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Twenty1</a>
+      <a class="navbar-brand" href="index.html">Twenty1</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span ></span>
         <span ></span>
@@ -35,36 +36,60 @@
     </div>
   </nav>
 
-
-  <!-- main-->
-
+  <!-- background overlay -->
   <div id="overlay">
+  <!-- main-->
   <div class="container">
 
-    <main >
-      <a href="index.html">
-      <button class="header-btn"><strong>Rookie</strong></button>
-    </a>
-      <button class="header-btn"><strong>Pro</strong></button>
-      <button class="header-btn"><strong>Superstar</strong></button>
+    <main>
+
+        <div id="bulls" class="card-one"> <!-- data attribute -  custom data attributes, that allow proprietary information to be exchanged between the HTML and its DOM      -->
+         Card 1:
+        </div>
+        <div  id="lakers" class="card-three">
+            Card 3:
+        </div>
+        <div id="wizards" class="card-four">
+            Card 4:
+        </div>
+        <div id="warriors" class="card-two">
+          Card 2:
+        </div>
+        
+      
+        <div class="player-rounds">
+          <div id="game-sum" style="color: white; text-align: center;">
+      
+            Sum: 
+          </div>  <!-- rounds  -->
+        </div>
     </main>
 
-
-
-    <!-- body-header -->
-    <div id="content1" class="body-header">
-      <h1 class="title-header"> WELCOME TO Twenty1</h1>
+    <div id="content1" class="player-level">  <!-- user name  -->
+      <h2 class="game-message" style="color: black;">Welcome Player  </h2>
     </div>
- 
-  </div>
-</div>
 
-  <footer class="web-footer justify-content-center">
-    <h3>Social Media</h3>
-    <ul class="list-unstyled d-flex footer-social">
-        <li><a href="#"><span class="fab fa-github-square fa-2x"></span></a></li>
-        <li><a href="#"><span class="fab fa-linkedin fa-2x "></span></a></li>
-    </ul>
+
+    <div id="sidebar" >
+        Are you Ready to play?
+      <div id="switches">
+        <button class="button" id="start" onclick="startGame()">Start</button>
+        <button id="draw-card" onclick="newCard()">Draw</button>
+        <button id="draw-card" onclick="newCard()">Stay</button>
+    </div>
+  </div>
+  
+</div>
+  
+
+
+
+<footer class="web-footer justify-content-center">
+      <h3>SHARE YOUR SCORE</h3>
+      <ul class="list-unstyled d-flex footer-social">
+          <li><a href="#"><span class="fab fa-instagram-square fa-2x"></span></a></li>
+          <li><a href="#"><span class="fab fa-twitter-square fa-2x "></span></a></li>
+      </ul>
 </footer>
 
 
